@@ -2,7 +2,7 @@
 
 function numeroRandom() {
   // Genera un número a
-  return Math.random();n
+  return Math.random();
 }
 
 module.exports = numeroRandom;
