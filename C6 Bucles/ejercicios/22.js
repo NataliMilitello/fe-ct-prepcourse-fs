@@ -6,21 +6,21 @@ function combine(str1, str2, str3) {
   // combine("abc", "", "123") == "a1b2c3"
   // combine("abc", "12345", "") == "a1b2c345"
   // combine("abc", "12345", "67") == "a16b27c345"
-  var result = "";
-  var maxLength = Math.max(str1.length, str2.length, str3.length);
 
-  for (var i = 0; i < maxLength; i++) {
-    if (str1[i]) {
-      result = result + str1[i];
-    }
-    if (str2[i]) {
-      result = result + str2[i];
-    }
-    if (str3[i]) {
-      result = result + str3[i];
-    }
-  }
-   return result;
+var result = "";
+var maxLength = Math.max(str1.length, str2.length, str3.length);
+
+for (var i = 0; i < maxLength; i++) {
+if (str1[i]) {
+result = result + str1[i];
 }
-
+if (str2[i]) {
+result = result + str2[i];
+}
+if (str3[i]) {
+result = result + str3[i];
+}
+}
+return result;
+}
 module.exports = combine;
