@@ -91,16 +91,28 @@ function deleteAbc(string) {
   // Tu tarea es eliminar las letras "a", "b" y "c" del string recibido.
   // Retorna el string sin estas letras.
   // Tu código:
-  var arrayString = string.split("");
-  for (var i = 0; i < arrayString.length; i++) {
-    if (arrayString[i] === "a" || arrayString[i] === "b" || arrayString[i] === "c") {
-      arrayString.splice(i, 1);
-      i--;
+  var arrayString=string.split("");
+  var arrayNuevo=[];
+  for (var i=0;i<arrayString.length;i++){
+    if (arrayString[i]!=="a" && arrayString[i]!=="b" && arrayString[i]!=="c"){
+  arrayNuevo.push(arrayString[i]);
     }
   }
-  var nuevoString = arrayString.join("");
-  return nuevoString;
+  return arrayNuevo.join("");
 }
+
+
+//otra forma de hacerlo:
+//   var arrayString = string.split("");
+//   for (var i = 0; i < arrayString.length; i++) {
+//     if (arrayString[i] === "a" || arrayString[i] === "b" || arrayString[i] === "c") {
+//       arrayString.splice(i, 1);
+//       i--;
+//     }
+//   }
+//   var nuevoString = arrayString.join("");
+//   return nuevoString;
+// }
 
 function sortArray(arrayOfStrings) {
   // Recibes un arreglo de strings.
@@ -108,11 +120,16 @@ function sortArray(arrayOfStrings) {
   // de la longitud de cada string.
   // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
   // Tu código:
-  arrayOfStrings.sort(function (a, b) {
-    return a.length - b.length;
-  });
-  return arrayOfStrings;
-}
+  return arrayOfStrings.sort((a, b)=>(a.length - b.length));
+ 
+  }
+  
+//otra forma de hacerlo:
+//   arrayOfStrings.sort(function (a, b) {
+//     return a.length - b.length;
+//   });
+//   return arrayOfStrings;
+// }
 
 function buscoInterseccion(array1, array2) {
   // Recibes dos arreglos de números.
